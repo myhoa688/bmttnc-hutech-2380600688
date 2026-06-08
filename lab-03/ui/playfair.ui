@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>402</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Caesar Cipher</string>
+   <string>Playfair Cipher</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -30,18 +30,18 @@
          color: #000000;
          font-size: 12px;
      }
-     QLabel#label_title {
-         font-size: 20px;
-         font-weight: bold;
-         color: #000000;
-         margin-bottom: 2px;
-     }
-     QLabel#label_subtitle {
-         font-size: 11px;
-         color: #555555;
-         margin-bottom: 8px;
-         font-style: italic;
-     }
+      QLabel#label_title {
+          font-size: 20px;
+          font-weight: bold;
+          color: #000000;
+          margin-bottom: 2px;
+      }
+      QLabel#label_subtitle {
+          font-size: 11px;
+          color: #555555;
+          margin-bottom: 8px;
+          font-style: italic;
+      }
      QTextEdit, QLineEdit {
          background-color: #ffffff;
          border: 1px solid #adadad;
@@ -89,7 +89,7 @@
     <item>
      <widget class="QLabel" name="label_title">
       <property name="text">
-       <string>CAESAR CIPHER</string>
+       <string>PLAYFAIR CIPHER</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -99,7 +99,7 @@
     <item>
      <widget class="QLabel" name="label_subtitle">
       <property name="text">
-       <string>Vương Thị Mỹ Hoa_ 2380600688</string>
+       <string>Vương Thị Mỹ Hoa_2380600688</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

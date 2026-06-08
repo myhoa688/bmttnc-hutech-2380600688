@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './ui/caesar.ui'
+# Form implementation generated from reading ui file './ui/railfence.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -117,7 +117,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 500, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 500, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -129,9 +129,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Caesar Cipher"))
-        self.label_title.setText(_translate("MainWindow", "CAESAR CIPHER"))
-        self.label_subtitle.setText(_translate("MainWindow", "Vương Thị Mỹ Hoa_ 2380600688"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Rail Fence Cipher"))
+        self.label_title.setText(_translate("MainWindow", "RAIL FENCE CIPHER"))
+        self.label_subtitle.setText(_translate("MainWindow", "Ngô Mạnh Hùng-2380600773"))
         self.label_plain.setText(_translate("MainWindow", "Plain Text:"))
         self.label_key.setText(_translate("MainWindow", "Key:"))
         self.label_cipher.setText(_translate("MainWindow", "CipherText:"))

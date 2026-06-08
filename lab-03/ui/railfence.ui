@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>402</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Caesar Cipher</string>
+   <string>Rail Fence Cipher</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -89,7 +89,7 @@
     <item>
      <widget class="QLabel" name="label_title">
       <property name="text">
-       <string>CAESAR CIPHER</string>
+       <string>RAIL FENCE CIPHER</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -99,7 +99,7 @@
     <item>
      <widget class="QLabel" name="label_subtitle">
       <property name="text">
-       <string>Vương Thị Mỹ Hoa_ 2380600688</string>
+       <string>Vương Thị Mỹ Hoa_2380600688</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

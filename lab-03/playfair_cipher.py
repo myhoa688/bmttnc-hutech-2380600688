@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './ui/caesar.ui'
+# Form implementation generated from reading ui file './ui/playfair.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -26,18 +26,18 @@ class Ui_MainWindow(object):
 "         color: #000000;\n"
 "         font-size: 12px;\n"
 "     }\n"
-"     QLabel#label_title {\n"
-"         font-size: 20px;\n"
-"         font-weight: bold;\n"
-"         color: #000000;\n"
-"         margin-bottom: 2px;\n"
-"     }\n"
-"     QLabel#label_subtitle {\n"
-"         font-size: 11px;\n"
-"         color: #555555;\n"
-"         margin-bottom: 8px;\n"
-"         font-style: italic;\n"
-"     }\n"
+"      QLabel#label_title {\n"
+"          font-size: 20px;\n"
+"          font-weight: bold;\n"
+"          color: #000000;\n"
+"          margin-bottom: 2px;\n"
+"      }\n"
+"      QLabel#label_subtitle {\n"
+"          font-size: 11px;\n"
+"          color: #555555;\n"
+"          margin-bottom: 8px;\n"
+"          font-style: italic;\n"
+"      }\n"
 "     QTextEdit, QLineEdit {\n"
 "         background-color: #ffffff;\n"
 "         border: 1px solid #adadad;\n"
@@ -129,9 +129,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Caesar Cipher"))
-        self.label_title.setText(_translate("MainWindow", "CAESAR CIPHER"))
-        self.label_subtitle.setText(_translate("MainWindow", "Vương Thị Mỹ Hoa_ 2380600688"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Playfair Cipher"))
+        self.label_title.setText(_translate("MainWindow", "PLAYFAIR CIPHER"))
+        self.label_subtitle.setText(_translate("MainWindow", "Vương Thị Mỹ Hoa_2380600688"))
         self.label_plain.setText(_translate("MainWindow", "Plain Text:"))
         self.label_key.setText(_translate("MainWindow", "Key:"))
         self.label_cipher.setText(_translate("MainWindow", "CipherText:"))
