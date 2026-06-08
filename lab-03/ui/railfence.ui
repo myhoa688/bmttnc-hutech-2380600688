@@ -99,7 +99,7 @@
     <item>
      <widget class="QLabel" name="label_subtitle">
       <property name="text">
-       <string>Vương Thị Mỹ Hoa_2380600688</string>
+       <string>Vương Thị Mỹ Hoa  2380600688</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

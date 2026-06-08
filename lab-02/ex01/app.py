@@ -16,18 +16,26 @@ def caesar():
 @app.route("/encrypt", methods=['POST'])
 def caesar_encrypt():
     text = request.form['inputPlainText']
-    key = int(request.form['inputKeyPlain'])
-    Caesar = CaesarCipher()
-    encrypted_text = Caesar.encrypt_text(text, key)
-    return f"text: {text}<br/>key: {key}<br/>encrypted text: {encrypted_text}"
+    try:
+        key = int(request.form['inputKeyPlain'])
+        Caesar = CaesarCipher()
+        encrypted_text = Caesar.encrypt_text(text, key)
+        normalized_key = key % 26
+        return f"text: {text}<br/>key: {normalized_key} (original: {key})<br/>encrypted text: {encrypted_text}"
+    except ValueError as e:
+        return f"Error: {str(e)}", 400
 
 @app.route("/decrypt", methods=['POST'])
 def caesar_decrypt():
     text = request.form['inputCipherText']
-    key = int(request.form['inputKeyCipher'])
-    Caesar = CaesarCipher()
-    decrypted_text = Caesar.decrypt_text(text, key)
-    return f"text: {text}<br/>key: {key}<br/>decrypted text: {decrypted_text}"
+    try:
+        key = int(request.form['inputKeyCipher'])
+        Caesar = CaesarCipher()
+        decrypted_text = Caesar.decrypt_text(text, key)
+        normalized_key = key % 26
+        return f"text: {text}<br/>key: {normalized_key} (original: {key})<br/>decrypted text: {decrypted_text}"
+    except ValueError as e:
+        return f"Error: {str(e)}", 400
 
 #main function
 if __name__ == "__main__":

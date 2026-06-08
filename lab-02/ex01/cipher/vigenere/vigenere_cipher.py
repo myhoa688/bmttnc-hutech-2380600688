@@ -3,11 +3,15 @@ class VigenereCipher:
         pass
 
     def vigenere_encrypt(self, plain_text, key):
+        clean_key = [c.upper() for c in key if c.isalpha()]
+        if not clean_key:
+            return plain_text
+
         encrypted_text = ""
         key_index = 0
         for char in plain_text:
             if char.isalpha():
-                key_shift = ord(key[key_index % len(key)].upper()) - ord('A')
+                key_shift = ord(clean_key[key_index % len(clean_key)]) - ord('A')
                 if char.isupper():
                     encrypted_text += chr((ord(char) - ord('A') + key_shift) % 26 + ord('A'))
                 else:
@@ -18,11 +22,15 @@ class VigenereCipher:
         return encrypted_text
 
     def vigenere_decrypt(self, encrypted_text, key):
+        clean_key = [c.upper() for c in key if c.isalpha()]
+        if not clean_key:
+            return encrypted_text
+
         decrypted_text = ""
         key_index = 0
         for char in encrypted_text:
             if char.isalpha():
-                key_shift = ord(key[key_index % len(key)].upper()) - ord('A')
+                key_shift = ord(clean_key[key_index % len(clean_key)]) - ord('A')
                 if char.isupper():
                     decrypted_text += chr((ord(char) - ord('A') - key_shift) % 26 + ord('A'))
                 else:

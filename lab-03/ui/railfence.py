@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Rail Fence Cipher"))
         self.label_title.setText(_translate("MainWindow", "RAIL FENCE CIPHER"))
-        self.label_subtitle.setText(_translate("MainWindow", "Ngô Mạnh Hùng-2380600773"))
+        self.label_subtitle.setText(_translate("MainWindow", "Vương Thị Mỹ Hoa  2380600688"))
         self.label_plain.setText(_translate("MainWindow", "Plain Text:"))
         self.label_key.setText(_translate("MainWindow", "Key:"))
         self.label_cipher.setText(_translate("MainWindow", "CipherText:"))

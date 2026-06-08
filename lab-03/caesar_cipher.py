@@ -38,6 +38,8 @@ class MyApp(QMainWindow):
             if response.status_code == 200:
                 data = response.json()
                 self.ui.txt_cipher_text.setText(data["encrypted_message"])
+                if "normalized_key" in data:
+                    self.ui.txt_key.setText(str(data["normalized_key"]))
                 
                 msg = QMessageBox(self)
                 msg.setIcon(QMessageBox.Information)
@@ -45,7 +47,11 @@ class MyApp(QMainWindow):
                 msg.setText("Encrypted Successfully")
                 msg.exec_()
             else:
-                QMessageBox.critical(self, "API Error", "Error while calling Encryption API.")
+                try:
+                    error_msg = response.json().get("error", "Error while calling Encryption API.")
+                except Exception:
+                    error_msg = "Error while calling Encryption API."
+                QMessageBox.critical(self, "API Error", error_msg)
         except requests.exceptions.RequestException as e:
             QMessageBox.critical(self, "Connection Error", f"Cannot connect to API server:\n{str(e)}")
 
@@ -76,6 +82,8 @@ class MyApp(QMainWindow):
             if response.status_code == 200:
                 data = response.json()
                 self.ui.txt_plain_text.setText(data["decrypted_message"])
+                if "normalized_key" in data:
+                    self.ui.txt_key.setText(str(data["normalized_key"]))
                 
                 msg = QMessageBox(self)
                 msg.setIcon(QMessageBox.Information)
@@ -83,7 +91,11 @@ class MyApp(QMainWindow):
                 msg.setText("Decrypted Successfully")
                 msg.exec_()
             else:
-                QMessageBox.critical(self, "API Error", "Error while calling Decryption API.")
+                try:
+                    error_msg = response.json().get("error", "Error while calling Decryption API.")
+                except Exception:
+                    error_msg = "Error while calling Decryption API."
+                QMessageBox.critical(self, "API Error", error_msg)
         except requests.exceptions.RequestException as e:
             QMessageBox.critical(self, "Connection Error", f"Cannot connect to API server:\n{str(e)}")
 
