@@ -3,7 +3,7 @@ class VigenereCipher:
         pass
 
     def vigenere_encrypt(self, plain_text, key):
-        if not key or not key.isalpha():
+        if not isinstance(key, str) or not key or not key.isalpha():
             raise ValueError("Key must be a non-empty string containing only alphabetic characters (no numbers, spaces, or special characters).")
         clean_key = [c.upper() for c in key]
 
@@ -22,7 +22,7 @@ class VigenereCipher:
         return encrypted_text
 
     def vigenere_decrypt(self, encrypted_text, key):
-        if not key or not key.isalpha():
+        if not isinstance(key, str) or not key or not key.isalpha():
             raise ValueError("Key must be a non-empty string containing only alphabetic characters (no numbers, spaces, or special characters).")
         clean_key = [c.upper() for c in key]
 

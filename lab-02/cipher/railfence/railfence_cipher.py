@@ -3,12 +3,14 @@ class RailFenceCipher:
         pass
 
     def rail_fence_encrypt(self, plain_text, num_rails):
+        if not isinstance(num_rails, int):
+            raise ValueError("Key must be an integer.")
+        if num_rails < 2:
+            raise ValueError("Key must be greater than or equal to 2.")
+        if plain_text and num_rails >= len(plain_text):
+            raise ValueError("Key must be smaller than the length of the text.")
         if not plain_text:
             return ""
-        if num_rails <= 0:
-            raise ValueError("Invalid Key: Number of rails must be positive.")
-        if num_rails == 1 or num_rails >= len(plain_text):
-            return plain_text
             
         rails = [[] for _ in range(num_rails)]
         rail_index = 0
@@ -24,12 +26,14 @@ class RailFenceCipher:
         return cipher_text
     
     def rail_fence_decrypt(self, cipher_text, num_rails):
+        if not isinstance(num_rails, int):
+            raise ValueError("Key must be an integer.")
+        if num_rails < 2:
+            raise ValueError("Key must be greater than or equal to 2.")
+        if cipher_text and num_rails >= len(cipher_text):
+            raise ValueError("Key must be smaller than the length of the text.")
         if not cipher_text:
             return ""
-        if num_rails <= 0:
-            raise ValueError("Invalid Key: Number of rails must be positive.")
-        if num_rails == 1 or num_rails >= len(cipher_text):
-            return cipher_text
             
         rail_lengths = [0] * num_rails
         rail_index = 0

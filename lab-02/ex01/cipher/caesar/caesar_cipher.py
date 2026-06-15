@@ -5,9 +5,11 @@ class CaesarCipher:
         self.alphabet = ALPHABET
 
     def encrypt_text(self, text: str, key: int) -> str:
+        if not isinstance(key, int):
+            raise ValueError("Key must be an integer.")
+        if key % 26 == 0:
+            raise ValueError("Key must not be 0 or a multiple of 26.")
         key = key % 26
-        if key == 0:
-            return text
         encrypted_text = []
         for letter in text:
             if letter.isupper():
@@ -32,9 +34,11 @@ class CaesarCipher:
         return "".join(encrypted_text)
 
     def decrypt_text(self, text: str, key: int) -> str:
+        if not isinstance(key, int):
+            raise ValueError("Key must be an integer.")
+        if key % 26 == 0:
+            raise ValueError("Key must not be 0 or a multiple of 26.")
         key = key % 26
-        if key == 0:
-            return text
         decrypted_text = []
         for letter in text:
             if letter.isupper():

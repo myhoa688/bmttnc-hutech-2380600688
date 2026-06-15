@@ -3,6 +3,8 @@ class PlayFairCipher:
         pass
 
     def create_playfair_matrix(self, key):
+        if not isinstance(key, str) or not key or not key.isalpha():
+            raise ValueError("Key must be a non-empty string containing only alphabetic characters (no numbers, spaces, or special characters).")
         key = key.upper().replace("J", "I")
         seen = set()
         matrix = []
